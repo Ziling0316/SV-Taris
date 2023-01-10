@@ -1,0 +1,12 @@
+//module game(
+//);
+//endmodule
+
+//生成一塊俄羅斯方塊
+module gentetromino(
+		 output reg  [0:7]  rand;
+);
+		 reg    [0:7]    rand;
+		 rand = {$random} % 7;
+
+endmodule

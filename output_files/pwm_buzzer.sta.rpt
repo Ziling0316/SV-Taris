@@ -1,0 +1,1515 @@
+TimeQuest Timing Analyzer report for pwm_buzzer
+Sun Jan 08 01:58:05 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1200mV 85C Model Metastability Report
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Setup: 'clk'
+ 25. Slow 1200mV 0C Model Hold: 'clk'
+ 26. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Slow 1200mV 0C Model Metastability Report
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Setup: 'clk'
+ 36. Fast 1200mV 0C Model Hold: 'clk'
+ 37. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Fast 1200mV 0C Model Metastability Report
+ 41. Multicorner Timing Analysis Summary
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Board Trace Model Assignments
+ 45. Input Transition Times
+ 46. Slow Corner Signal Integrity Metrics
+ 47. Fast Corner Signal Integrity Metrics
+ 48. Setup Transfers
+ 49. Hold Transfers
+ 50. Report TCCS
+ 51. Report RSKM
+ 52. Unconstrained Paths
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; pwm_buzzer                                         ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C10E144C8                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.85        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  84.6%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary             ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 7.77 MHz ; 7.77 MHz        ; clk        ;      ;
++----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+----------+------------------+
+; Clock ; Slack    ; End Point TNS    ;
++-------+----------+------------------+
+; clk   ; -127.744 ; -2743.575        ;
++-------+----------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.485 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -145.752                         ;
++-------+--------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                         ;
++----------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack    ; From Node                         ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++----------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -127.744 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.145     ; 128.620    ;
+; -127.736 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.145     ; 128.612    ;
+; -127.488 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.145     ; 128.364    ;
+; -127.378 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.145     ; 128.254    ;
+; -127.321 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.145     ; 128.197    ;
+; -123.797 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.068      ; 124.886    ;
+; -123.789 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.068      ; 124.878    ;
+; -123.541 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.068      ; 124.630    ;
+; -123.431 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.068      ; 124.520    ;
+; -123.374 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.068      ; 124.463    ;
+; -118.306 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.439     ; 118.888    ;
+; -118.298 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.439     ; 118.880    ;
+; -118.050 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.439     ; 118.632    ;
+; -117.940 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.439     ; 118.522    ;
+; -117.883 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.439     ; 118.465    ;
+; -113.511 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.608     ; 113.924    ;
+; -113.503 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.608     ; 113.916    ;
+; -113.255 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.608     ; 113.668    ;
+; -113.145 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.608     ; 113.558    ;
+; -113.088 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.608     ; 113.501    ;
+; -108.336 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.624     ; 108.733    ;
+; -108.328 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.624     ; 108.725    ;
+; -108.080 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.624     ; 108.477    ;
+; -107.970 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.624     ; 108.367    ;
+; -107.913 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.624     ; 108.310    ;
+; -103.186 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.608     ; 103.599    ;
+; -103.178 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.608     ; 103.591    ;
+; -102.930 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.608     ; 103.343    ;
+; -102.820 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.608     ; 103.233    ;
+; -102.763 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.608     ; 103.176    ;
+; -97.886  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.629     ; 98.278     ;
+; -97.878  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.629     ; 98.270     ;
+; -97.630  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.629     ; 98.022     ;
+; -97.520  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.629     ; 97.912     ;
+; -97.463  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.629     ; 97.855     ;
+; -90.382  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.560     ; 90.843     ;
+; -90.374  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.560     ; 90.835     ;
+; -90.126  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.560     ; 90.587     ;
+; -90.016  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.560     ; 90.477     ;
+; -89.959  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.560     ; 90.420     ;
+; -86.893  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.613     ; 87.301     ;
+; -86.885  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.613     ; 87.293     ;
+; -86.637  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.613     ; 87.045     ;
+; -86.527  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.613     ; 86.935     ;
+; -86.470  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.613     ; 86.878     ;
+; -81.917  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.613     ; 82.325     ;
+; -81.909  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.613     ; 82.317     ;
+; -81.661  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.613     ; 82.069     ;
+; -81.551  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.613     ; 81.959     ;
+; -81.494  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.613     ; 81.902     ;
+; -77.634  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.629     ; 78.026     ;
+; -77.626  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.629     ; 78.018     ;
+; -77.378  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.629     ; 77.770     ;
+; -77.268  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.629     ; 77.660     ;
+; -77.211  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.629     ; 77.603     ;
+; -72.526  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.945     ; 72.602     ;
+; -72.518  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.945     ; 72.594     ;
+; -72.270  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.945     ; 72.346     ;
+; -72.160  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.945     ; 72.236     ;
+; -72.103  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.945     ; 72.179     ;
+; -64.967  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.185     ; 65.803     ;
+; -64.959  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.185     ; 65.795     ;
+; -64.711  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.185     ; 65.547     ;
+; -64.601  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.185     ; 65.437     ;
+; -64.544  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.185     ; 65.380     ;
+; -60.376  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.109     ; 61.288     ;
+; -60.368  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.109     ; 61.280     ;
+; -60.120  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.109     ; 61.032     ;
+; -60.010  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.109     ; 60.922     ;
+; -59.953  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.109     ; 60.865     ;
+; -55.741  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.172     ; 56.590     ;
+; -55.733  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.172     ; 56.582     ;
+; -55.485  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.172     ; 56.334     ;
+; -55.375  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.172     ; 56.224     ;
+; -55.318  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.172     ; 56.167     ;
+; -50.930  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 51.863     ;
+; -50.922  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 51.855     ;
+; -50.674  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 51.607     ;
+; -50.564  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 51.497     ;
+; -50.507  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.088     ; 51.440     ;
+; -49.769  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.608     ; 50.182     ;
+; -49.761  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.608     ; 50.174     ;
+; -49.513  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.608     ; 49.926     ;
+; -49.403  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.608     ; 49.816     ;
+; -49.346  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.608     ; 49.759     ;
+; -43.198  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.181     ; 44.038     ;
+; -43.190  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.181     ; 44.030     ;
+; -42.942  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.181     ; 43.782     ;
+; -42.832  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.181     ; 43.672     ;
+; -42.775  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.181     ; 43.615     ;
+; -41.356  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.144     ; 42.233     ;
+; -41.348  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.144     ; 42.225     ;
+; -41.100  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.144     ; 41.977     ;
+; -40.990  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.144     ; 41.867     ;
+; -40.933  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.144     ; 41.810     ;
+; -34.296  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.079      ; 35.396     ;
+; -34.288  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.079      ; 35.388     ;
+; -34.040  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.079      ; 35.140     ;
+; -33.930  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.079      ; 35.030     ;
+; -33.873  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.079      ; 34.973     ;
++----------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                     ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.485 ; speed_control:speed_control_tool|cnt[0]    ; speed_control:speed_control_tool|cnt[0]    ; clk          ; clk         ; 0.000        ; 0.049      ; 0.746      ;
+; 0.540 ; speed_control:speed_control_tool|count[25] ; speed_control:speed_control_tool|count[25] ; clk          ; clk         ; 0.000        ; 0.049      ; 0.801      ;
+; 0.777 ; speed_control:speed_control_tool|count[19] ; speed_control:speed_control_tool|count[19] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.038      ;
+; 0.778 ; speed_control:speed_control_tool|count[17] ; speed_control:speed_control_tool|count[17] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.039      ;
+; 0.779 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[18] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.040      ;
+; 0.781 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.042      ;
+; 0.791 ; wave_gen:wave_gen_tool|cnt[3]              ; wave_gen:wave_gen_tool|cnt[3]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.052      ;
+; 0.791 ; wave_gen:wave_gen_tool|cnt[11]             ; wave_gen:wave_gen_tool|cnt[11]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.052      ;
+; 0.791 ; wave_gen:wave_gen_tool|cnt[13]             ; wave_gen:wave_gen_tool|cnt[13]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.052      ;
+; 0.791 ; wave_gen:wave_gen_tool|cnt[15]             ; wave_gen:wave_gen_tool|cnt[15]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.052      ;
+; 0.792 ; speed_control:speed_control_tool|count[3]  ; speed_control:speed_control_tool|count[3]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.792 ; speed_control:speed_control_tool|count[13] ; speed_control:speed_control_tool|count[13] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.792 ; wave_gen:wave_gen_tool|cnt[1]              ; wave_gen:wave_gen_tool|cnt[1]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.792 ; wave_gen:wave_gen_tool|cnt[5]              ; wave_gen:wave_gen_tool|cnt[5]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.792 ; wave_gen:wave_gen_tool|cnt[19]             ; wave_gen:wave_gen_tool|cnt[19]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.792 ; wave_gen:wave_gen_tool|cnt[27]             ; wave_gen:wave_gen_tool|cnt[27]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.792 ; wave_gen:wave_gen_tool|cnt[29]             ; wave_gen:wave_gen_tool|cnt[29]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.053      ;
+; 0.793 ; speed_control:speed_control_tool|count[1]  ; speed_control:speed_control_tool|count[1]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; speed_control:speed_control_tool|count[8]  ; speed_control:speed_control_tool|count[8]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; speed_control:speed_control_tool|count[9]  ; speed_control:speed_control_tool|count[9]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; speed_control:speed_control_tool|count[10] ; speed_control:speed_control_tool|count[10] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; speed_control:speed_control_tool|count[11] ; speed_control:speed_control_tool|count[11] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; speed_control:speed_control_tool|count[12] ; speed_control:speed_control_tool|count[12] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; speed_control:speed_control_tool|count[15] ; speed_control:speed_control_tool|count[15] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; wave_gen:wave_gen_tool|cnt[17]             ; wave_gen:wave_gen_tool|cnt[17]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.793 ; wave_gen:wave_gen_tool|cnt[21]             ; wave_gen:wave_gen_tool|cnt[21]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.054      ;
+; 0.794 ; speed_control:speed_control_tool|count[2]  ; speed_control:speed_control_tool|count[2]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; speed_control:speed_control_tool|count[5]  ; speed_control:speed_control_tool|count[5]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; speed_control:speed_control_tool|count[7]  ; speed_control:speed_control_tool|count[7]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; speed_control:speed_control_tool|count[16] ; speed_control:speed_control_tool|count[16] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; wave_gen:wave_gen_tool|cnt[2]              ; wave_gen:wave_gen_tool|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; wave_gen:wave_gen_tool|cnt[6]              ; wave_gen:wave_gen_tool|cnt[6]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; wave_gen:wave_gen_tool|cnt[7]              ; wave_gen:wave_gen_tool|cnt[7]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; wave_gen:wave_gen_tool|cnt[9]              ; wave_gen:wave_gen_tool|cnt[9]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; wave_gen:wave_gen_tool|cnt[16]             ; wave_gen:wave_gen_tool|cnt[16]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.794 ; wave_gen:wave_gen_tool|cnt[31]             ; wave_gen:wave_gen_tool|cnt[31]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.055      ;
+; 0.795 ; speed_control:speed_control_tool|count[14] ; speed_control:speed_control_tool|count[14] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; speed_control:speed_control_tool|count[23] ; speed_control:speed_control_tool|count[23] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; speed_control:speed_control_tool|count[24] ; speed_control:speed_control_tool|count[24] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[4]              ; wave_gen:wave_gen_tool|cnt[4]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[12]             ; wave_gen:wave_gen_tool|cnt[12]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[14]             ; wave_gen:wave_gen_tool|cnt[14]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[18]             ; wave_gen:wave_gen_tool|cnt[18]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[22]             ; wave_gen:wave_gen_tool|cnt[22]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[23]             ; wave_gen:wave_gen_tool|cnt[23]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.795 ; wave_gen:wave_gen_tool|cnt[25]             ; wave_gen:wave_gen_tool|cnt[25]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.056      ;
+; 0.796 ; speed_control:speed_control_tool|count[4]  ; speed_control:speed_control_tool|count[4]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.057      ;
+; 0.796 ; speed_control:speed_control_tool|count[6]  ; speed_control:speed_control_tool|count[6]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.057      ;
+; 0.796 ; speed_control:speed_control_tool|count[21] ; speed_control:speed_control_tool|count[21] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.057      ;
+; 0.796 ; wave_gen:wave_gen_tool|cnt[8]              ; wave_gen:wave_gen_tool|cnt[8]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.057      ;
+; 0.796 ; wave_gen:wave_gen_tool|cnt[28]             ; wave_gen:wave_gen_tool|cnt[28]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.057      ;
+; 0.796 ; wave_gen:wave_gen_tool|cnt[30]             ; wave_gen:wave_gen_tool|cnt[30]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.057      ;
+; 0.797 ; speed_control:speed_control_tool|count[22] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.049      ; 1.058      ;
+; 0.797 ; wave_gen:wave_gen_tool|cnt[26]             ; wave_gen:wave_gen_tool|cnt[26]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.058      ;
+; 0.797 ; wave_gen:wave_gen_tool|cnt[24]             ; wave_gen:wave_gen_tool|cnt[24]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.058      ;
+; 0.810 ; speed_control:speed_control_tool|count[0]  ; speed_control:speed_control_tool|count[0]  ; clk          ; clk         ; 0.000        ; 0.049      ; 1.071      ;
+; 0.811 ; speed_control:speed_control_tool|cnt[2]    ; speed_control:speed_control_tool|cnt[2]    ; clk          ; clk         ; 0.000        ; 0.049      ; 1.072      ;
+; 0.812 ; speed_control:speed_control_tool|cnt[4]    ; speed_control:speed_control_tool|cnt[4]    ; clk          ; clk         ; 0.000        ; 0.049      ; 1.073      ;
+; 0.816 ; wave_gen:wave_gen_tool|cnt[0]              ; wave_gen:wave_gen_tool|cnt[0]              ; clk          ; clk         ; 0.000        ; 0.049      ; 1.077      ;
+; 0.820 ; wave_gen:wave_gen_tool|cnt[10]             ; wave_gen:wave_gen_tool|cnt[10]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.081      ;
+; 0.820 ; wave_gen:wave_gen_tool|cnt[20]             ; wave_gen:wave_gen_tool|cnt[20]             ; clk          ; clk         ; 0.000        ; 0.049      ; 1.081      ;
+; 0.822 ; speed_control:speed_control_tool|cnt[5]    ; speed_control:speed_control_tool|cnt[5]    ; clk          ; clk         ; 0.000        ; 0.049      ; 1.083      ;
+; 0.840 ; speed_control:speed_control_tool|cnt[1]    ; speed_control:speed_control_tool|cnt[1]    ; clk          ; clk         ; 0.000        ; 0.049      ; 1.101      ;
+; 1.009 ; speed_control:speed_control_tool|cnt[3]    ; speed_control:speed_control_tool|cnt[3]    ; clk          ; clk         ; 0.000        ; 0.049      ; 1.270      ;
+; 1.126 ; speed_control:speed_control_tool|count[17] ; speed_control:speed_control_tool|count[18] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.393      ;
+; 1.126 ; speed_control:speed_control_tool|count[19] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.393      ;
+; 1.134 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[19] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.401      ;
+; 1.136 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[21] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.403      ;
+; 1.139 ; wave_gen:wave_gen_tool|cnt[1]              ; wave_gen:wave_gen_tool|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.056      ; 1.407      ;
+; 1.139 ; wave_gen:wave_gen_tool|cnt[3]              ; wave_gen:wave_gen_tool|cnt[4]              ; clk          ; clk         ; 0.000        ; 0.056      ; 1.407      ;
+; 1.139 ; wave_gen:wave_gen_tool|cnt[11]             ; wave_gen:wave_gen_tool|cnt[12]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.407      ;
+; 1.139 ; wave_gen:wave_gen_tool|cnt[13]             ; wave_gen:wave_gen_tool|cnt[14]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.407      ;
+; 1.140 ; speed_control:speed_control_tool|count[1]  ; speed_control:speed_control_tool|count[2]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; speed_control:speed_control_tool|count[3]  ; speed_control:speed_control_tool|count[4]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; speed_control:speed_control_tool|count[9]  ; speed_control:speed_control_tool|count[10] ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; speed_control:speed_control_tool|count[11] ; speed_control:speed_control_tool|count[12] ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; speed_control:speed_control_tool|count[13] ; speed_control:speed_control_tool|count[14] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.407      ;
+; 1.140 ; wave_gen:wave_gen_tool|cnt[5]              ; wave_gen:wave_gen_tool|cnt[6]              ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; wave_gen:wave_gen_tool|cnt[17]             ; wave_gen:wave_gen_tool|cnt[18]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; wave_gen:wave_gen_tool|cnt[19]             ; wave_gen:wave_gen_tool|cnt[20]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; wave_gen:wave_gen_tool|cnt[27]             ; wave_gen:wave_gen_tool|cnt[28]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.140 ; wave_gen:wave_gen_tool|cnt[29]             ; wave_gen:wave_gen_tool|cnt[30]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.408      ;
+; 1.141 ; speed_control:speed_control_tool|count[5]  ; speed_control:speed_control_tool|count[6]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.409      ;
+; 1.141 ; speed_control:speed_control_tool|count[7]  ; speed_control:speed_control_tool|count[8]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.409      ;
+; 1.141 ; speed_control:speed_control_tool|count[15] ; speed_control:speed_control_tool|count[16] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.408      ;
+; 1.141 ; wave_gen:wave_gen_tool|cnt[7]              ; wave_gen:wave_gen_tool|cnt[8]              ; clk          ; clk         ; 0.000        ; 0.056      ; 1.409      ;
+; 1.141 ; wave_gen:wave_gen_tool|cnt[9]              ; wave_gen:wave_gen_tool|cnt[10]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.409      ;
+; 1.141 ; wave_gen:wave_gen_tool|cnt[21]             ; wave_gen:wave_gen_tool|cnt[22]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.409      ;
+; 1.142 ; wave_gen:wave_gen_tool|cnt[23]             ; wave_gen:wave_gen_tool|cnt[24]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.410      ;
+; 1.142 ; wave_gen:wave_gen_tool|cnt[25]             ; wave_gen:wave_gen_tool|cnt[26]             ; clk          ; clk         ; 0.000        ; 0.056      ; 1.410      ;
+; 1.143 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.410      ;
+; 1.143 ; speed_control:speed_control_tool|count[23] ; speed_control:speed_control_tool|count[24] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.410      ;
+; 1.144 ; speed_control:speed_control_tool|count[21] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.411      ;
+; 1.145 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.055      ; 1.412      ;
+; 1.147 ; speed_control:speed_control_tool|count[0]  ; speed_control:speed_control_tool|count[1]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.415      ;
+; 1.147 ; speed_control:speed_control_tool|count[8]  ; speed_control:speed_control_tool|count[9]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.415      ;
+; 1.147 ; speed_control:speed_control_tool|count[10] ; speed_control:speed_control_tool|count[11] ; clk          ; clk         ; 0.000        ; 0.056      ; 1.415      ;
+; 1.147 ; wave_gen:wave_gen_tool|cnt[0]              ; wave_gen:wave_gen_tool|cnt[1]              ; clk          ; clk         ; 0.000        ; 0.056      ; 1.415      ;
+; 1.148 ; speed_control:speed_control_tool|count[2]  ; speed_control:speed_control_tool|count[3]  ; clk          ; clk         ; 0.000        ; 0.056      ; 1.416      ;
+; 1.148 ; wave_gen:wave_gen_tool|cnt[2]              ; wave_gen:wave_gen_tool|cnt[3]              ; clk          ; clk         ; 0.000        ; 0.056      ; 1.416      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                                        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[0]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[10]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[11]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[12]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[13]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[14]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[15]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[16]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[17]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[18]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[19]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[1]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[20]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[21]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[22]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[23]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[24]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[25]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[2]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[3]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[4]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[5]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[6]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[7]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[8]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[9]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[0]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[1]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[2]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[3]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[4]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[0]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[1]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[2]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[3]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[4]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[5]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[13] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[14] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[15] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[16] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[17] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[18] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[19] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[20] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[21] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[22] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[23] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[24] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[25] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|buzz                ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[0]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[10]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[11]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[12]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[13]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[14]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[15]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[16]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[17]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[18]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[19]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[1]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[20]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[21]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[22]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[23]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[24]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[25]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[26]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[27]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[28]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[29]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[2]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[30]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[31]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[3]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[4]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[5]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[6]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[7]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[8]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[9]              ;
+; 0.078  ; 0.298        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[1]       ;
+; 0.099  ; 0.319        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[2]       ;
+; 0.110  ; 0.330        ; 0.220          ; High Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[23]      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 6.034 ; 5.960 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 5.905 ; 5.832 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary              ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 8.56 MHz ; 8.56 MHz        ; clk        ;      ;
++----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+----------+-----------------+
+; Clock ; Slack    ; End Point TNS   ;
++-------+----------+-----------------+
+; clk   ; -115.774 ; -2526.009       ;
++-------+----------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.430 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -145.836                        ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                          ;
++----------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack    ; From Node                         ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++----------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -115.774 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.156     ; 116.640    ;
+; -115.767 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.156     ; 116.633    ;
+; -115.606 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.156     ; 116.472    ;
+; -115.485 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.156     ; 116.351    ;
+; -115.417 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.156     ; 116.283    ;
+; -112.256 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.052      ; 113.330    ;
+; -112.249 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.052      ; 113.323    ;
+; -112.088 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.052      ; 113.162    ;
+; -111.967 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.052      ; 113.041    ;
+; -111.899 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.052      ; 112.973    ;
+; -107.288 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.413     ; 107.897    ;
+; -107.281 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.413     ; 107.890    ;
+; -107.120 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.413     ; 107.729    ;
+; -106.999 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.413     ; 107.608    ;
+; -106.931 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.413     ; 107.540    ;
+; -103.068 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.612     ; 103.478    ;
+; -103.061 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.612     ; 103.471    ;
+; -102.900 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.612     ; 103.310    ;
+; -102.779 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.612     ; 103.189    ;
+; -102.711 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.612     ; 103.121    ;
+; -98.384  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.609     ; 98.797     ;
+; -98.377  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.609     ; 98.790     ;
+; -98.216  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.609     ; 98.629     ;
+; -98.095  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.609     ; 98.508     ;
+; -98.027  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.609     ; 98.440     ;
+; -93.751  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.612     ; 94.161     ;
+; -93.744  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.612     ; 94.154     ;
+; -93.583  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.612     ; 93.993     ;
+; -93.462  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.612     ; 93.872     ;
+; -93.394  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.612     ; 93.804     ;
+; -88.954  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.615     ; 89.361     ;
+; -88.947  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.615     ; 89.354     ;
+; -88.786  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.615     ; 89.193     ;
+; -88.665  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.615     ; 89.072     ;
+; -88.597  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.615     ; 89.004     ;
+; -82.149  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.544     ; 82.627     ;
+; -82.142  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.544     ; 82.620     ;
+; -81.981  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.544     ; 82.459     ;
+; -81.860  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.544     ; 82.338     ;
+; -81.792  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.544     ; 82.270     ;
+; -78.966  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.595     ; 79.393     ;
+; -78.959  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.595     ; 79.386     ;
+; -78.798  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.595     ; 79.225     ;
+; -78.677  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.595     ; 79.104     ;
+; -78.609  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.595     ; 79.036     ;
+; -74.499  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.595     ; 74.926     ;
+; -74.492  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.595     ; 74.919     ;
+; -74.331  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.595     ; 74.758     ;
+; -74.210  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.595     ; 74.637     ;
+; -74.142  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.595     ; 74.569     ;
+; -70.624  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.615     ; 71.031     ;
+; -70.617  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.615     ; 71.024     ;
+; -70.456  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.615     ; 70.863     ;
+; -70.335  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.615     ; 70.742     ;
+; -70.267  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.615     ; 70.674     ;
+; -65.972  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.928     ; 66.066     ;
+; -65.965  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.928     ; 66.059     ;
+; -65.804  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.928     ; 65.898     ;
+; -65.683  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.928     ; 65.777     ;
+; -65.615  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.928     ; 65.709     ;
+; -59.048  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.187     ; 59.883     ;
+; -59.041  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.187     ; 59.876     ;
+; -58.880  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.187     ; 59.715     ;
+; -58.759  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.187     ; 59.594     ;
+; -58.691  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.187     ; 59.526     ;
+; -54.894  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.134     ; 55.782     ;
+; -54.887  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.134     ; 55.775     ;
+; -54.726  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.134     ; 55.614     ;
+; -54.605  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.134     ; 55.493     ;
+; -54.537  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.134     ; 55.425     ;
+; -50.742  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.184     ; 51.580     ;
+; -50.735  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.184     ; 51.573     ;
+; -50.574  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.184     ; 51.412     ;
+; -50.453  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.184     ; 51.291     ;
+; -50.385  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.184     ; 51.223     ;
+; -46.419  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.105     ; 47.336     ;
+; -46.412  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.105     ; 47.329     ;
+; -46.251  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.105     ; 47.168     ;
+; -46.130  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.105     ; 47.047     ;
+; -46.062  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.105     ; 46.979     ;
+; -45.400  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.612     ; 45.810     ;
+; -45.393  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.612     ; 45.803     ;
+; -45.232  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.612     ; 45.642     ;
+; -45.111  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.612     ; 45.521     ;
+; -45.043  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.612     ; 45.453     ;
+; -39.380  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.193     ; 40.209     ;
+; -39.373  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.193     ; 40.202     ;
+; -39.212  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.193     ; 40.041     ;
+; -39.091  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.193     ; 39.920     ;
+; -39.023  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.193     ; 39.852     ;
+; -37.801  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.160     ; 38.663     ;
+; -37.794  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.160     ; 38.656     ;
+; -37.633  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.160     ; 38.495     ;
+; -37.512  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.160     ; 38.374     ;
+; -37.444  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.160     ; 38.306     ;
+; -31.174  ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.076      ; 32.272     ;
+; -31.167  ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.076      ; 32.265     ;
+; -31.006  ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.076      ; 32.104     ;
+; -30.885  ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.076      ; 31.983     ;
+; -30.817  ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.076      ; 31.915     ;
++----------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.430 ; speed_control:speed_control_tool|cnt[0]    ; speed_control:speed_control_tool|cnt[0]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.669      ;
+; 0.497 ; speed_control:speed_control_tool|count[25] ; speed_control:speed_control_tool|count[25] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.736      ;
+; 0.723 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[18] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.962      ;
+; 0.723 ; speed_control:speed_control_tool|count[19] ; speed_control:speed_control_tool|count[19] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.962      ;
+; 0.724 ; speed_control:speed_control_tool|count[17] ; speed_control:speed_control_tool|count[17] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.963      ;
+; 0.728 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.967      ;
+; 0.732 ; wave_gen:wave_gen_tool|cnt[13]             ; wave_gen:wave_gen_tool|cnt[13]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.971      ;
+; 0.732 ; wave_gen:wave_gen_tool|cnt[15]             ; wave_gen:wave_gen_tool|cnt[15]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.971      ;
+; 0.733 ; wave_gen:wave_gen_tool|cnt[3]              ; wave_gen:wave_gen_tool|cnt[3]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.972      ;
+; 0.734 ; speed_control:speed_control_tool|count[3]  ; speed_control:speed_control_tool|count[3]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.973      ;
+; 0.734 ; wave_gen:wave_gen_tool|cnt[1]              ; wave_gen:wave_gen_tool|cnt[1]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.973      ;
+; 0.734 ; wave_gen:wave_gen_tool|cnt[5]              ; wave_gen:wave_gen_tool|cnt[5]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.973      ;
+; 0.734 ; wave_gen:wave_gen_tool|cnt[11]             ; wave_gen:wave_gen_tool|cnt[11]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.973      ;
+; 0.734 ; wave_gen:wave_gen_tool|cnt[19]             ; wave_gen:wave_gen_tool|cnt[19]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.973      ;
+; 0.734 ; wave_gen:wave_gen_tool|cnt[29]             ; wave_gen:wave_gen_tool|cnt[29]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.973      ;
+; 0.735 ; speed_control:speed_control_tool|count[10] ; speed_control:speed_control_tool|count[10] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; speed_control:speed_control_tool|count[11] ; speed_control:speed_control_tool|count[11] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; speed_control:speed_control_tool|count[12] ; speed_control:speed_control_tool|count[12] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; speed_control:speed_control_tool|count[13] ; speed_control:speed_control_tool|count[13] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; wave_gen:wave_gen_tool|cnt[17]             ; wave_gen:wave_gen_tool|cnt[17]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; wave_gen:wave_gen_tool|cnt[21]             ; wave_gen:wave_gen_tool|cnt[21]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; wave_gen:wave_gen_tool|cnt[27]             ; wave_gen:wave_gen_tool|cnt[27]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.735 ; wave_gen:wave_gen_tool|cnt[31]             ; wave_gen:wave_gen_tool|cnt[31]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.974      ;
+; 0.736 ; speed_control:speed_control_tool|count[1]  ; speed_control:speed_control_tool|count[1]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.736 ; speed_control:speed_control_tool|count[2]  ; speed_control:speed_control_tool|count[2]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.736 ; speed_control:speed_control_tool|count[8]  ; speed_control:speed_control_tool|count[8]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.736 ; speed_control:speed_control_tool|count[9]  ; speed_control:speed_control_tool|count[9]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.736 ; speed_control:speed_control_tool|count[15] ; speed_control:speed_control_tool|count[15] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.736 ; speed_control:speed_control_tool|count[16] ; speed_control:speed_control_tool|count[16] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.736 ; wave_gen:wave_gen_tool|cnt[6]              ; wave_gen:wave_gen_tool|cnt[6]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.975      ;
+; 0.737 ; speed_control:speed_control_tool|count[5]  ; speed_control:speed_control_tool|count[5]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.976      ;
+; 0.737 ; speed_control:speed_control_tool|count[7]  ; speed_control:speed_control_tool|count[7]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.976      ;
+; 0.737 ; speed_control:speed_control_tool|count[24] ; speed_control:speed_control_tool|count[24] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.976      ;
+; 0.737 ; wave_gen:wave_gen_tool|cnt[7]              ; wave_gen:wave_gen_tool|cnt[7]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.976      ;
+; 0.737 ; wave_gen:wave_gen_tool|cnt[9]              ; wave_gen:wave_gen_tool|cnt[9]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.976      ;
+; 0.737 ; wave_gen:wave_gen_tool|cnt[22]             ; wave_gen:wave_gen_tool|cnt[22]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.976      ;
+; 0.738 ; speed_control:speed_control_tool|count[14] ; speed_control:speed_control_tool|count[14] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; speed_control:speed_control_tool|count[21] ; speed_control:speed_control_tool|count[21] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; speed_control:speed_control_tool|count[23] ; speed_control:speed_control_tool|count[23] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; wave_gen:wave_gen_tool|cnt[2]              ; wave_gen:wave_gen_tool|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; wave_gen:wave_gen_tool|cnt[14]             ; wave_gen:wave_gen_tool|cnt[14]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; wave_gen:wave_gen_tool|cnt[16]             ; wave_gen:wave_gen_tool|cnt[16]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; wave_gen:wave_gen_tool|cnt[23]             ; wave_gen:wave_gen_tool|cnt[23]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.738 ; wave_gen:wave_gen_tool|cnt[25]             ; wave_gen:wave_gen_tool|cnt[25]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.977      ;
+; 0.739 ; wave_gen:wave_gen_tool|cnt[4]              ; wave_gen:wave_gen_tool|cnt[4]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.978      ;
+; 0.739 ; wave_gen:wave_gen_tool|cnt[12]             ; wave_gen:wave_gen_tool|cnt[12]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.978      ;
+; 0.739 ; wave_gen:wave_gen_tool|cnt[18]             ; wave_gen:wave_gen_tool|cnt[18]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.978      ;
+; 0.739 ; wave_gen:wave_gen_tool|cnt[30]             ; wave_gen:wave_gen_tool|cnt[30]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.978      ;
+; 0.740 ; speed_control:speed_control_tool|count[4]  ; speed_control:speed_control_tool|count[4]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.979      ;
+; 0.740 ; speed_control:speed_control_tool|count[6]  ; speed_control:speed_control_tool|count[6]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.979      ;
+; 0.740 ; wave_gen:wave_gen_tool|cnt[8]              ; wave_gen:wave_gen_tool|cnt[8]              ; clk          ; clk         ; 0.000        ; 0.044      ; 0.979      ;
+; 0.740 ; wave_gen:wave_gen_tool|cnt[28]             ; wave_gen:wave_gen_tool|cnt[28]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.979      ;
+; 0.741 ; speed_control:speed_control_tool|count[22] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.044      ; 0.980      ;
+; 0.741 ; wave_gen:wave_gen_tool|cnt[26]             ; wave_gen:wave_gen_tool|cnt[26]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.980      ;
+; 0.741 ; wave_gen:wave_gen_tool|cnt[24]             ; wave_gen:wave_gen_tool|cnt[24]             ; clk          ; clk         ; 0.000        ; 0.044      ; 0.980      ;
+; 0.753 ; speed_control:speed_control_tool|cnt[4]    ; speed_control:speed_control_tool|cnt[4]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.992      ;
+; 0.753 ; speed_control:speed_control_tool|cnt[2]    ; speed_control:speed_control_tool|cnt[2]    ; clk          ; clk         ; 0.000        ; 0.044      ; 0.992      ;
+; 0.756 ; speed_control:speed_control_tool|count[0]  ; speed_control:speed_control_tool|count[0]  ; clk          ; clk         ; 0.000        ; 0.044      ; 0.995      ;
+; 0.761 ; wave_gen:wave_gen_tool|cnt[0]              ; wave_gen:wave_gen_tool|cnt[0]              ; clk          ; clk         ; 0.000        ; 0.044      ; 1.000      ;
+; 0.761 ; wave_gen:wave_gen_tool|cnt[10]             ; wave_gen:wave_gen_tool|cnt[10]             ; clk          ; clk         ; 0.000        ; 0.044      ; 1.000      ;
+; 0.762 ; wave_gen:wave_gen_tool|cnt[20]             ; wave_gen:wave_gen_tool|cnt[20]             ; clk          ; clk         ; 0.000        ; 0.044      ; 1.001      ;
+; 0.767 ; speed_control:speed_control_tool|cnt[5]    ; speed_control:speed_control_tool|cnt[5]    ; clk          ; clk         ; 0.000        ; 0.044      ; 1.006      ;
+; 0.784 ; speed_control:speed_control_tool|cnt[1]    ; speed_control:speed_control_tool|cnt[1]    ; clk          ; clk         ; 0.000        ; 0.044      ; 1.023      ;
+; 0.918 ; speed_control:speed_control_tool|cnt[3]    ; speed_control:speed_control_tool|cnt[3]    ; clk          ; clk         ; 0.000        ; 0.044      ; 1.157      ;
+; 1.036 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[19] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.281      ;
+; 1.039 ; speed_control:speed_control_tool|count[19] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.284      ;
+; 1.041 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[21] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.286      ;
+; 1.042 ; speed_control:speed_control_tool|count[17] ; speed_control:speed_control_tool|count[18] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.287      ;
+; 1.046 ; wave_gen:wave_gen_tool|cnt[0]              ; wave_gen:wave_gen_tool|cnt[1]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.292      ;
+; 1.047 ; wave_gen:wave_gen_tool|cnt[13]             ; wave_gen:wave_gen_tool|cnt[14]             ; clk          ; clk         ; 0.000        ; 0.051      ; 1.293      ;
+; 1.048 ; speed_control:speed_control_tool|count[0]  ; speed_control:speed_control_tool|count[1]  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.293      ;
+; 1.048 ; speed_control:speed_control_tool|count[10] ; speed_control:speed_control_tool|count[11] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.293      ;
+; 1.048 ; wave_gen:wave_gen_tool|cnt[2]              ; wave_gen:wave_gen_tool|cnt[3]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.294      ;
+; 1.048 ; wave_gen:wave_gen_tool|cnt[3]              ; wave_gen:wave_gen_tool|cnt[4]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.294      ;
+; 1.048 ; wave_gen:wave_gen_tool|cnt[6]              ; wave_gen:wave_gen_tool|cnt[7]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.294      ;
+; 1.048 ; wave_gen:wave_gen_tool|cnt[12]             ; wave_gen:wave_gen_tool|cnt[13]             ; clk          ; clk         ; 0.000        ; 0.051      ; 1.294      ;
+; 1.048 ; wave_gen:wave_gen_tool|cnt[14]             ; wave_gen:wave_gen_tool|cnt[15]             ; clk          ; clk         ; 0.000        ; 0.051      ; 1.294      ;
+; 1.048 ; wave_gen:wave_gen_tool|cnt[16]             ; wave_gen:wave_gen_tool|cnt[17]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.293      ;
+; 1.049 ; speed_control:speed_control_tool|count[2]  ; speed_control:speed_control_tool|count[3]  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.294      ;
+; 1.049 ; speed_control:speed_control_tool|count[8]  ; speed_control:speed_control_tool|count[9]  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.294      ;
+; 1.049 ; speed_control:speed_control_tool|count[14] ; speed_control:speed_control_tool|count[15] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.294      ;
+; 1.049 ; speed_control:speed_control_tool|count[16] ; speed_control:speed_control_tool|count[17] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.294      ;
+; 1.049 ; wave_gen:wave_gen_tool|cnt[4]              ; wave_gen:wave_gen_tool|cnt[5]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.295      ;
+; 1.049 ; wave_gen:wave_gen_tool|cnt[5]              ; wave_gen:wave_gen_tool|cnt[6]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.295      ;
+; 1.049 ; wave_gen:wave_gen_tool|cnt[11]             ; wave_gen:wave_gen_tool|cnt[12]             ; clk          ; clk         ; 0.000        ; 0.051      ; 1.295      ;
+; 1.050 ; speed_control:speed_control_tool|count[3]  ; speed_control:speed_control_tool|count[4]  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.295      ;
+; 1.050 ; speed_control:speed_control_tool|count[24] ; speed_control:speed_control_tool|count[25] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.295      ;
+; 1.050 ; wave_gen:wave_gen_tool|cnt[8]              ; wave_gen:wave_gen_tool|cnt[9]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.296      ;
+; 1.050 ; wave_gen:wave_gen_tool|cnt[18]             ; wave_gen:wave_gen_tool|cnt[19]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.295      ;
+; 1.050 ; wave_gen:wave_gen_tool|cnt[19]             ; wave_gen:wave_gen_tool|cnt[20]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.295      ;
+; 1.050 ; wave_gen:wave_gen_tool|cnt[22]             ; wave_gen:wave_gen_tool|cnt[23]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.295      ;
+; 1.050 ; wave_gen:wave_gen_tool|cnt[29]             ; wave_gen:wave_gen_tool|cnt[30]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.295      ;
+; 1.051 ; speed_control:speed_control_tool|count[4]  ; speed_control:speed_control_tool|count[5]  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
+; 1.051 ; speed_control:speed_control_tool|count[6]  ; speed_control:speed_control_tool|count[7]  ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
+; 1.051 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
+; 1.051 ; wave_gen:wave_gen_tool|cnt[1]              ; wave_gen:wave_gen_tool|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.051      ; 1.297      ;
+; 1.051 ; wave_gen:wave_gen_tool|cnt[21]             ; wave_gen:wave_gen_tool|cnt[22]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
+; 1.051 ; wave_gen:wave_gen_tool|cnt[27]             ; wave_gen:wave_gen_tool|cnt[28]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
+; 1.051 ; wave_gen:wave_gen_tool|cnt[28]             ; wave_gen:wave_gen_tool|cnt[29]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
+; 1.051 ; wave_gen:wave_gen_tool|cnt[30]             ; wave_gen:wave_gen_tool|cnt[31]             ; clk          ; clk         ; 0.000        ; 0.050      ; 1.296      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                                        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[0]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[10]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[11]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[12]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[13]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[14]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[15]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[16]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[17]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[18]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[19]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[1]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[20]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[21]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[22]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[23]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[24]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[25]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[2]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[3]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[4]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[5]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[6]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[7]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[8]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[9]       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[0]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[1]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[2]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[3]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; music_mem:music_mem_tool|music[4]          ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[0]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[1]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[2]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[3]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[4]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[5]    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[13] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[14] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[15] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[16] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[17] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[18] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[19] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[20] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[21] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[22] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[23] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[24] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[25] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; speed_control:speed_control_tool|count[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|buzz                ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[0]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[10]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[11]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[12]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[13]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[14]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[15]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[16]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[17]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[18]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[19]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[1]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[20]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[21]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[22]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[23]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[24]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[25]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[26]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[27]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[28]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[29]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[2]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[30]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[31]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[3]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[4]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[5]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[6]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[7]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[8]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[9]              ;
+; -0.040 ; 0.176        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[1]       ;
+; -0.020 ; 0.196        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[2]       ;
+; -0.014 ; 0.202        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[19]      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 5.891 ; 5.761 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 5.771 ; 5.644 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+---------+------------------+
+; Clock ; Slack   ; End Point TNS    ;
++-------+---------+------------------+
+; clk   ; -55.647 ; -1128.379        ;
++-------+---------+------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.201 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -112.624                        ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                         ;
++---------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                         ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -55.647 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.047     ; 56.607     ;
+; -55.575 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.047     ; 56.535     ;
+; -55.528 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.047     ; 56.488     ;
+; -55.449 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.047     ; 56.409     ;
+; -55.387 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[0]  ; clk          ; clk         ; 1.000        ; -0.047     ; 56.347     ;
+; -53.875 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.025      ; 54.907     ;
+; -53.803 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.025      ; 54.835     ;
+; -53.756 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.025      ; 54.788     ;
+; -53.677 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.025      ; 54.709     ;
+; -53.615 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[1]  ; clk          ; clk         ; 1.000        ; 0.025      ; 54.647     ;
+; -51.433 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.201     ; 52.239     ;
+; -51.361 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.201     ; 52.167     ;
+; -51.314 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.201     ; 52.120     ;
+; -51.235 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.201     ; 52.041     ;
+; -51.173 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[2]  ; clk          ; clk         ; 1.000        ; -0.201     ; 51.979     ;
+; -49.238 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.233     ; 50.012     ;
+; -49.166 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.233     ; 49.940     ;
+; -49.119 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.233     ; 49.893     ;
+; -49.040 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.233     ; 49.814     ;
+; -48.978 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[3]  ; clk          ; clk         ; 1.000        ; -0.233     ; 49.752     ;
+; -46.997 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.256     ; 47.748     ;
+; -46.925 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.256     ; 47.676     ;
+; -46.878 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.256     ; 47.629     ;
+; -46.799 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.256     ; 47.550     ;
+; -46.737 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[4]  ; clk          ; clk         ; 1.000        ; -0.256     ; 47.488     ;
+; -44.687 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.233     ; 45.461     ;
+; -44.615 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.233     ; 45.389     ;
+; -44.568 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.233     ; 45.342     ;
+; -44.489 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.233     ; 45.263     ;
+; -44.427 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[5]  ; clk          ; clk         ; 1.000        ; -0.233     ; 45.201     ;
+; -42.295 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.261     ; 43.041     ;
+; -42.223 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.261     ; 42.969     ;
+; -42.176 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.261     ; 42.922     ;
+; -42.097 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.261     ; 42.843     ;
+; -42.035 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[6]  ; clk          ; clk         ; 1.000        ; -0.261     ; 42.781     ;
+; -38.996 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.242     ; 39.761     ;
+; -38.924 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.242     ; 39.689     ;
+; -38.877 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.242     ; 39.642     ;
+; -38.798 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.242     ; 39.563     ;
+; -38.736 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[7]  ; clk          ; clk         ; 1.000        ; -0.242     ; 39.501     ;
+; -37.481 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.275     ; 38.213     ;
+; -37.409 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.275     ; 38.141     ;
+; -37.362 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.275     ; 38.094     ;
+; -37.283 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.275     ; 38.015     ;
+; -37.221 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[8]  ; clk          ; clk         ; 1.000        ; -0.275     ; 37.953     ;
+; -35.206 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.275     ; 35.938     ;
+; -35.134 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.275     ; 35.866     ;
+; -35.087 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.275     ; 35.819     ;
+; -35.008 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.275     ; 35.740     ;
+; -34.946 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[9]  ; clk          ; clk         ; 1.000        ; -0.275     ; 35.678     ;
+; -33.253 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.261     ; 33.999     ;
+; -33.181 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.261     ; 33.927     ;
+; -33.134 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.261     ; 33.880     ;
+; -33.055 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.261     ; 33.801     ;
+; -32.993 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[10] ; clk          ; clk         ; 1.000        ; -0.261     ; 33.739     ;
+; -30.971 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.377     ; 31.601     ;
+; -30.899 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.377     ; 31.529     ;
+; -30.852 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.377     ; 31.482     ;
+; -30.773 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.377     ; 31.403     ;
+; -30.711 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[11] ; clk          ; clk         ; 1.000        ; -0.377     ; 31.341     ;
+; -27.622 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.055     ; 28.574     ;
+; -27.550 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.055     ; 28.502     ;
+; -27.503 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.055     ; 28.455     ;
+; -27.424 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.055     ; 28.376     ;
+; -27.362 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[12] ; clk          ; clk         ; 1.000        ; -0.055     ; 28.314     ;
+; -25.641 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.022     ; 26.626     ;
+; -25.569 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.022     ; 26.554     ;
+; -25.522 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.022     ; 26.507     ;
+; -25.443 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.022     ; 26.428     ;
+; -25.381 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[13] ; clk          ; clk         ; 1.000        ; -0.022     ; 26.366     ;
+; -23.526 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.065     ; 24.468     ;
+; -23.454 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.065     ; 24.396     ;
+; -23.407 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.065     ; 24.349     ;
+; -23.328 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.065     ; 24.270     ;
+; -23.266 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[14] ; clk          ; clk         ; 1.000        ; -0.065     ; 24.208     ;
+; -21.469 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.006     ; 22.470     ;
+; -21.397 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.006     ; 22.398     ;
+; -21.350 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.006     ; 22.351     ;
+; -21.271 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.006     ; 22.272     ;
+; -21.209 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[15] ; clk          ; clk         ; 1.000        ; -0.006     ; 22.210     ;
+; -20.912 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.233     ; 21.686     ;
+; -20.840 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.233     ; 21.614     ;
+; -20.793 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.233     ; 21.567     ;
+; -20.714 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.233     ; 21.488     ;
+; -20.652 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[16] ; clk          ; clk         ; 1.000        ; -0.233     ; 21.426     ;
+; -18.073 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.064     ; 19.016     ;
+; -18.001 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.064     ; 18.944     ;
+; -17.954 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.064     ; 18.897     ;
+; -17.875 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.064     ; 18.818     ;
+; -17.813 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[17] ; clk          ; clk         ; 1.000        ; -0.064     ; 18.756     ;
+; -17.234 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.024     ; 18.217     ;
+; -17.162 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.024     ; 18.145     ;
+; -17.115 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.024     ; 18.098     ;
+; -17.036 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.024     ; 18.019     ;
+; -16.974 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[18] ; clk          ; clk         ; 1.000        ; -0.024     ; 17.957     ;
+; -14.204 ; music_mem:music_mem_tool|music[0] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.031      ; 15.242     ;
+; -14.132 ; music_mem:music_mem_tool|music[3] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.031      ; 15.170     ;
+; -14.085 ; music_mem:music_mem_tool|music[1] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.031      ; 15.123     ;
+; -14.006 ; music_mem:music_mem_tool|music[2] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.031      ; 15.044     ;
+; -13.944 ; music_mem:music_mem_tool|music[4] ; cal_divnum:cal_divnum_tool|divnum[19] ; clk          ; clk         ; 1.000        ; 0.031      ; 14.982     ;
++---------+-----------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.201 ; speed_control:speed_control_tool|cnt[0]    ; speed_control:speed_control_tool|cnt[0]    ; clk          ; clk         ; 0.000        ; 0.022      ; 0.307      ;
+; 0.219 ; speed_control:speed_control_tool|count[25] ; speed_control:speed_control_tool|count[25] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.325      ;
+; 0.312 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[18] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.418      ;
+; 0.312 ; speed_control:speed_control_tool|count[19] ; speed_control:speed_control_tool|count[19] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.418      ;
+; 0.313 ; speed_control:speed_control_tool|count[17] ; speed_control:speed_control_tool|count[17] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.419      ;
+; 0.314 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.420      ;
+; 0.318 ; speed_control:speed_control_tool|count[3]  ; speed_control:speed_control_tool|count[3]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[1]              ; wave_gen:wave_gen_tool|cnt[1]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[3]              ; wave_gen:wave_gen_tool|cnt[3]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[5]              ; wave_gen:wave_gen_tool|cnt[5]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[13]             ; wave_gen:wave_gen_tool|cnt[13]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[15]             ; wave_gen:wave_gen_tool|cnt[15]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[29]             ; wave_gen:wave_gen_tool|cnt[29]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.318 ; wave_gen:wave_gen_tool|cnt[31]             ; wave_gen:wave_gen_tool|cnt[31]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.424      ;
+; 0.319 ; speed_control:speed_control_tool|count[5]  ; speed_control:speed_control_tool|count[5]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; speed_control:speed_control_tool|count[10] ; speed_control:speed_control_tool|count[10] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; speed_control:speed_control_tool|count[11] ; speed_control:speed_control_tool|count[11] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; speed_control:speed_control_tool|count[12] ; speed_control:speed_control_tool|count[12] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; speed_control:speed_control_tool|count[13] ; speed_control:speed_control_tool|count[13] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[6]              ; wave_gen:wave_gen_tool|cnt[6]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[7]              ; wave_gen:wave_gen_tool|cnt[7]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[11]             ; wave_gen:wave_gen_tool|cnt[11]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[17]             ; wave_gen:wave_gen_tool|cnt[17]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[19]             ; wave_gen:wave_gen_tool|cnt[19]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[21]             ; wave_gen:wave_gen_tool|cnt[21]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.319 ; wave_gen:wave_gen_tool|cnt[27]             ; wave_gen:wave_gen_tool|cnt[27]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.425      ;
+; 0.320 ; speed_control:speed_control_tool|count[1]  ; speed_control:speed_control_tool|count[1]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[2]  ; speed_control:speed_control_tool|count[2]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[4]  ; speed_control:speed_control_tool|count[4]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[7]  ; speed_control:speed_control_tool|count[7]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[8]  ; speed_control:speed_control_tool|count[8]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[9]  ; speed_control:speed_control_tool|count[9]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[14] ; speed_control:speed_control_tool|count[14] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[15] ; speed_control:speed_control_tool|count[15] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[16] ; speed_control:speed_control_tool|count[16] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; speed_control:speed_control_tool|count[21] ; speed_control:speed_control_tool|count[21] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[2]              ; wave_gen:wave_gen_tool|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[8]              ; wave_gen:wave_gen_tool|cnt[8]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[9]              ; wave_gen:wave_gen_tool|cnt[9]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[14]             ; wave_gen:wave_gen_tool|cnt[14]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[16]             ; wave_gen:wave_gen_tool|cnt[16]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[18]             ; wave_gen:wave_gen_tool|cnt[18]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[22]             ; wave_gen:wave_gen_tool|cnt[22]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[23]             ; wave_gen:wave_gen_tool|cnt[23]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.320 ; wave_gen:wave_gen_tool|cnt[25]             ; wave_gen:wave_gen_tool|cnt[25]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.426      ;
+; 0.321 ; speed_control:speed_control_tool|count[6]  ; speed_control:speed_control_tool|count[6]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; speed_control:speed_control_tool|count[23] ; speed_control:speed_control_tool|count[23] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; speed_control:speed_control_tool|count[24] ; speed_control:speed_control_tool|count[24] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; wave_gen:wave_gen_tool|cnt[4]              ; wave_gen:wave_gen_tool|cnt[4]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; wave_gen:wave_gen_tool|cnt[12]             ; wave_gen:wave_gen_tool|cnt[12]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; wave_gen:wave_gen_tool|cnt[28]             ; wave_gen:wave_gen_tool|cnt[28]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; wave_gen:wave_gen_tool|cnt[30]             ; wave_gen:wave_gen_tool|cnt[30]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.321 ; wave_gen:wave_gen_tool|cnt[24]             ; wave_gen:wave_gen_tool|cnt[24]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.427      ;
+; 0.322 ; speed_control:speed_control_tool|count[22] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.022      ; 0.428      ;
+; 0.322 ; wave_gen:wave_gen_tool|cnt[26]             ; wave_gen:wave_gen_tool|cnt[26]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.428      ;
+; 0.328 ; speed_control:speed_control_tool|count[0]  ; speed_control:speed_control_tool|count[0]  ; clk          ; clk         ; 0.000        ; 0.022      ; 0.434      ;
+; 0.328 ; speed_control:speed_control_tool|cnt[4]    ; speed_control:speed_control_tool|cnt[4]    ; clk          ; clk         ; 0.000        ; 0.022      ; 0.434      ;
+; 0.329 ; speed_control:speed_control_tool|cnt[2]    ; speed_control:speed_control_tool|cnt[2]    ; clk          ; clk         ; 0.000        ; 0.022      ; 0.435      ;
+; 0.330 ; wave_gen:wave_gen_tool|cnt[0]              ; wave_gen:wave_gen_tool|cnt[0]              ; clk          ; clk         ; 0.000        ; 0.022      ; 0.436      ;
+; 0.332 ; wave_gen:wave_gen_tool|cnt[10]             ; wave_gen:wave_gen_tool|cnt[10]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.438      ;
+; 0.333 ; wave_gen:wave_gen_tool|cnt[20]             ; wave_gen:wave_gen_tool|cnt[20]             ; clk          ; clk         ; 0.000        ; 0.022      ; 0.439      ;
+; 0.334 ; speed_control:speed_control_tool|cnt[5]    ; speed_control:speed_control_tool|cnt[5]    ; clk          ; clk         ; 0.000        ; 0.022      ; 0.440      ;
+; 0.340 ; speed_control:speed_control_tool|cnt[1]    ; speed_control:speed_control_tool|cnt[1]    ; clk          ; clk         ; 0.000        ; 0.022      ; 0.446      ;
+; 0.394 ; speed_control:speed_control_tool|cnt[3]    ; speed_control:speed_control_tool|cnt[3]    ; clk          ; clk         ; 0.000        ; 0.022      ; 0.500      ;
+; 0.459 ; speed_control:speed_control_tool|count[19] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.567      ;
+; 0.460 ; speed_control:speed_control_tool|count[17] ; speed_control:speed_control_tool|count[18] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.568      ;
+; 0.464 ; speed_control:speed_control_tool|count[3]  ; speed_control:speed_control_tool|count[4]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.573      ;
+; 0.465 ; speed_control:speed_control_tool|count[5]  ; speed_control:speed_control_tool|count[6]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.574      ;
+; 0.465 ; speed_control:speed_control_tool|count[11] ; speed_control:speed_control_tool|count[12] ; clk          ; clk         ; 0.000        ; 0.025      ; 0.574      ;
+; 0.465 ; wave_gen:wave_gen_tool|cnt[1]              ; wave_gen:wave_gen_tool|cnt[2]              ; clk          ; clk         ; 0.000        ; 0.024      ; 0.573      ;
+; 0.465 ; wave_gen:wave_gen_tool|cnt[3]              ; wave_gen:wave_gen_tool|cnt[4]              ; clk          ; clk         ; 0.000        ; 0.024      ; 0.573      ;
+; 0.465 ; wave_gen:wave_gen_tool|cnt[5]              ; wave_gen:wave_gen_tool|cnt[6]              ; clk          ; clk         ; 0.000        ; 0.024      ; 0.573      ;
+; 0.465 ; wave_gen:wave_gen_tool|cnt[13]             ; wave_gen:wave_gen_tool|cnt[14]             ; clk          ; clk         ; 0.000        ; 0.024      ; 0.573      ;
+; 0.466 ; speed_control:speed_control_tool|count[1]  ; speed_control:speed_control_tool|count[2]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.575      ;
+; 0.466 ; speed_control:speed_control_tool|count[7]  ; speed_control:speed_control_tool|count[8]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.575      ;
+; 0.466 ; speed_control:speed_control_tool|count[9]  ; speed_control:speed_control_tool|count[10] ; clk          ; clk         ; 0.000        ; 0.025      ; 0.575      ;
+; 0.466 ; speed_control:speed_control_tool|count[13] ; speed_control:speed_control_tool|count[14] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.574      ;
+; 0.466 ; wave_gen:wave_gen_tool|cnt[7]              ; wave_gen:wave_gen_tool|cnt[8]              ; clk          ; clk         ; 0.000        ; 0.024      ; 0.574      ;
+; 0.466 ; wave_gen:wave_gen_tool|cnt[11]             ; wave_gen:wave_gen_tool|cnt[12]             ; clk          ; clk         ; 0.000        ; 0.024      ; 0.574      ;
+; 0.466 ; wave_gen:wave_gen_tool|cnt[29]             ; wave_gen:wave_gen_tool|cnt[30]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.573      ;
+; 0.467 ; speed_control:speed_control_tool|count[15] ; speed_control:speed_control_tool|count[16] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.575      ;
+; 0.467 ; speed_control:speed_control_tool|count[21] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.575      ;
+; 0.467 ; wave_gen:wave_gen_tool|cnt[9]              ; wave_gen:wave_gen_tool|cnt[10]             ; clk          ; clk         ; 0.000        ; 0.024      ; 0.575      ;
+; 0.467 ; wave_gen:wave_gen_tool|cnt[17]             ; wave_gen:wave_gen_tool|cnt[18]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.574      ;
+; 0.467 ; wave_gen:wave_gen_tool|cnt[19]             ; wave_gen:wave_gen_tool|cnt[20]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.574      ;
+; 0.467 ; wave_gen:wave_gen_tool|cnt[21]             ; wave_gen:wave_gen_tool|cnt[22]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.574      ;
+; 0.467 ; wave_gen:wave_gen_tool|cnt[27]             ; wave_gen:wave_gen_tool|cnt[28]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.574      ;
+; 0.468 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[19] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.576      ;
+; 0.468 ; speed_control:speed_control_tool|count[23] ; speed_control:speed_control_tool|count[24] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.576      ;
+; 0.468 ; wave_gen:wave_gen_tool|cnt[23]             ; wave_gen:wave_gen_tool|cnt[24]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.575      ;
+; 0.468 ; wave_gen:wave_gen_tool|cnt[25]             ; wave_gen:wave_gen_tool|cnt[26]             ; clk          ; clk         ; 0.000        ; 0.023      ; 0.575      ;
+; 0.470 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[21] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.578      ;
+; 0.471 ; speed_control:speed_control_tool|count[18] ; speed_control:speed_control_tool|count[20] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.579      ;
+; 0.473 ; speed_control:speed_control_tool|count[20] ; speed_control:speed_control_tool|count[22] ; clk          ; clk         ; 0.000        ; 0.024      ; 0.581      ;
+; 0.474 ; speed_control:speed_control_tool|count[0]  ; speed_control:speed_control_tool|count[1]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.583      ;
+; 0.474 ; speed_control:speed_control_tool|count[10] ; speed_control:speed_control_tool|count[11] ; clk          ; clk         ; 0.000        ; 0.025      ; 0.583      ;
+; 0.475 ; speed_control:speed_control_tool|count[2]  ; speed_control:speed_control_tool|count[3]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.584      ;
+; 0.475 ; speed_control:speed_control_tool|count[4]  ; speed_control:speed_control_tool|count[5]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.584      ;
+; 0.475 ; speed_control:speed_control_tool|count[8]  ; speed_control:speed_control_tool|count[9]  ; clk          ; clk         ; 0.000        ; 0.025      ; 0.584      ;
+; 0.475 ; wave_gen:wave_gen_tool|cnt[0]              ; wave_gen:wave_gen_tool|cnt[1]              ; clk          ; clk         ; 0.000        ; 0.024      ; 0.583      ;
++-------+--------------------------------------------+--------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                                            ;
++--------+--------------+----------------+-----------------+-------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+-----------------+-------+------------+--------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk                                        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[0]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[10]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[11]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[12]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[13]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[14]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[15]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[16]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[17]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[18]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[19]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[1]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[20]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[21]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[22]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[23]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[24]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[25]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[2]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[3]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[4]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[5]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[6]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[7]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[8]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[9]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; music_mem:music_mem_tool|music[0]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; music_mem:music_mem_tool|music[1]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; music_mem:music_mem_tool|music[2]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; music_mem:music_mem_tool|music[3]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; music_mem:music_mem_tool|music[4]          ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[0]    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[1]    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[2]    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[3]    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[4]    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|cnt[5]    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[13] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[14] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[15] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[16] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[17] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[18] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[19] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[20] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[21] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[22] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[23] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[24] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[25] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; speed_control:speed_control_tool|count[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|buzz                ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[0]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[10]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[11]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[12]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[13]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[14]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[15]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[16]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[17]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[18]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[19]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[1]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[20]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[21]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[22]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[23]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[24]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[25]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[26]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[27]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[28]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[29]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[2]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[30]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[31]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[3]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[4]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[5]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[6]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[7]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[8]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; wave_gen:wave_gen_tool|cnt[9]              ;
+; -0.218 ; -0.034       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; cal_divnum:cal_divnum_tool|divnum[21]      ;
+; -0.208 ; -0.024       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; music_mem:music_mem_tool|music[0]          ;
+; -0.208 ; -0.024       ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; music_mem:music_mem_tool|music[1]          ;
++--------+--------------+----------------+-----------------+-------+------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 2.814 ; 2.865 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 2.759 ; 2.808 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -127.744  ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -127.744  ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -2743.575 ; 0.0   ; 0.0      ; 0.0     ; -145.836            ;
+;  clk             ; -2743.575 ; 0.000 ; N/A      ; N/A     ; -145.836            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 6.034 ; 5.960 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; buzz      ; clk        ; 2.759 ; 2.808 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; buzz          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzz          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-07 V                   ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-07 V                  ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.53e-07 V                   ; 2.35 V              ; -0.00333 V          ; 0.096 V                              ; 0.006 V                              ; 4.5e-10 s                   ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.53e-07 V                  ; 2.35 V             ; -0.00333 V         ; 0.096 V                             ; 0.006 V                             ; 4.5e-10 s                  ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.51e-07 V                   ; 2.34 V              ; -0.00699 V          ; 0.108 V                              ; 0.027 V                              ; 6.58e-10 s                  ; 8.2e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 2.51e-07 V                  ; 2.34 V             ; -0.00699 V         ; 0.108 V                             ; 0.027 V                             ; 6.58e-10 s                 ; 8.2e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; buzz          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-08 V                   ; 2.71 V              ; -0.0354 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-08 V                  ; 2.71 V             ; -0.0354 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.2e-08 V                    ; 2.74 V              ; -0.061 V            ; 0.159 V                              ; 0.078 V                              ; 2.7e-10 s                   ; 2.2e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.2e-08 V                   ; 2.74 V             ; -0.061 V           ; 0.159 V                             ; 0.078 V                             ; 2.7e-10 s                  ; 2.2e-10 s                  ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.52e-08 V                   ; 2.7 V               ; -0.0121 V           ; 0.274 V                              ; 0.034 V                              ; 3.18e-10 s                  ; 4.96e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.52e-08 V                  ; 2.7 V              ; -0.0121 V          ; 0.274 V                             ; 0.034 V                             ; 3.18e-10 s                 ; 4.96e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clk        ; clk      ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clk        ; clk      ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 96    ; 96   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Jan 08 01:57:50 2023
+Info: Command: quartus_sta pwm_buzzer -c pwm_buzzer
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'pwm_buzzer.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -127.744
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):  -127.744           -2743.575 clk 
+Info (332146): Worst-case hold slack is 0.485
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.485               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -145.752 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -115.774
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):  -115.774           -2526.009 clk 
+Info (332146): Worst-case hold slack is 0.430
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.430               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -145.836 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -55.647
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -55.647           -1128.379 clk 
+Info (332146): Worst-case hold slack is 0.201
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.201               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -112.624 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4757 megabytes
+    Info: Processing ended: Sun Jan 08 01:58:04 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
+
+

@@ -1,0 +1,41 @@
+//module game(
+//);
+//endmodule
+
+//生成一塊俄羅斯方塊
+module genTetromino(
+		 input 	wire  clock,
+		 input	[2:0]	id,	//決定第幾個方塊
+		 output  reg   [7:0] Data_R[8]
+		 
+);
+		 reg   tetromino[4][2];
+		 //規定裡面只能放int
+		 parameter int I[4][2] = '{'{1, 2}, '{1, 3}, '{1, 4}, '{1, 5}}; //I
+		           int J[4][2] = '{'{0, 2}, '{1, 2}, '{1, 3}, '{1, 4}}; //J
+					  int L[4][2] = '{'{1, 2}, '{1, 3}, '{1, 4}, '{0, 4}}; //L
+					  int O[4][2] = '{'{0, 3}, '{0, 4}, '{1, 3}, '{1, 4}}; //O
+					  int S[4][2] = '{'{1, 2}, '{1, 3}, '{0, 3}, '{0, 4}}; //S
+					  int T[4][2] = '{'{1, 2}, '{1, 3}, '{1, 4}, '{0, 3}}; //T
+					  int Z[4][2] = '{'{0, 2}, '{0, 3}, '{1, 3}, '{1, 4}}; //Z
+		 
+		 always	@(posedge clock)
+		 begin
+			case(id)
+				3'b000 : tetromino = I ;
+				3'b001 : tetromino = J ;
+				3'b010 : tetromino = L ;
+				3'b011 : tetromino = O ;
+				3'b100 : tetromino = S ;
+				3'b101 : tetromino = T ;
+				3'b110 : tetromino = Z ;		
+			endcase
+		 end
+		 always	@(posedge clock)
+		 begin
+			for(int i = 0; i < 4; i++)
+			begin
+				Data_R[T[i][0]][T[i][1]];
+			end
+		 end
+endmodule

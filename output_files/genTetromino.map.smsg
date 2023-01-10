@@ -1,0 +1,5 @@
+Warning (10268): Verilog HDL information at genTetromino.sv(53): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at genTetromino.sv(63): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at top.sv(3): object "DATA_R" differs only in case from object "data_r" in the same scope
+Info (10281): Verilog HDL Declaration information at top.sv(3): object "DATA_G" differs only in case from object "data_g" in the same scope
+Info (10281): Verilog HDL Declaration information at top.sv(3): object "DATA_B" differs only in case from object "data_b" in the same scope

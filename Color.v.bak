@@ -1,0 +1,29 @@
+module Color(output logic [0:7] Data_R[8], Data_G[8], Data_B[8],
+             input [1:0] count,
+				 input CLK); 
+				 
+				 parameter logic[7:0] love[7:0] = 
+						   '{8'b100111001,
+							  8'b011101110,
+							  8'b011111110,
+							  8'b101111101,
+							  8'b110111011,
+							  8'b111010111,
+							  8'b111101111,
+							  8'b111111111
+							};
+				 initial
+					begin
+						Data_R = 8'b11111111;
+						Data_G = 8'b11111111;
+						Data_B = 8'b11111111;
+					end
+				 always @(posedge CLK)
+					begin
+						case(count)
+							2'b00: Data_R = love[8];
+							2'b01: Data_G = love[8];
+							2'b10: Data_B = love[8];
+						endcase
+					end
+endmodule

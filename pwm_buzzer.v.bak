@@ -1,0 +1,181 @@
+module pum_buzzer(
+		input  wire  clock,
+		input  wire  reset;				  //reset關掉才會跑
+		input  wire  choose;
+		input  wire  key_input;
+		
+		output reg  buzzer;
+		);
+		//定義音符周期數
+		localparam	M0 = 98800,
+						M1 = 95600,
+						M2 = 85150,
+						M3 = 75850,
+						M4 = 71600,
+						M5 = 63750,
+						M6 = 56800,
+						M7 = 50600;
+						
+		reg      [16:0]   pre_set;			//代表我現在的音
+		reg      [16:0]   pre_div;
+						
+		reg		[16:0]	music_time;		//記數每個音符的時序週期	
+		reg 		[10:0]	music_repeat;	//記數每個音符重複次數
+		reg      [5 :0]	music_total;	//記數曲譜中的音符各數
+		reg					flag;				//歌曲類別 : 0->小星星, 1->兩隻老虎				
+		reg		[5 :0]   YINFU;			//定義樂譜音符總共各數
+		reg      [10:0]   cishu				//定義不同音符有不同數量
+		reg      [10:0]	cishu_div;
+		
+		//選擇歌曲
+		always	@(posedge clock, negedge reset)
+		begin
+			if(!reset)	
+				flag <= 1'b0;
+			else if(choose)
+				flag = ~flag;
+		end
+		
+		//設定曲譜音符個數
+		always	@(posedge clock, negedge reset)
+		begin
+			if(!reset)
+				YINFU <= 48;
+			else if(flag == 1'b1)
+				YINFU <= 36;
+			else
+				YINFU <= 48;
+		end
+		
+		//計算每個音符的週期
+		always	@(posedge clock, negedge reset)
+		begin
+			if(!reset)
+				music_time <= 0;
+			else
+			begin
+				if(music_time == pre_set - 1)
+					music_time <= 0;
+				else
+					music_time = music_time + 1;
+			end
+		end
+		
+		//記數音符重複次數
+		always	@(posedge clock, negedge reset)
+		begin
+			if(!reset)
+				music_repeat <= 0;
+			else
+			begin
+				if(music_repeat == pre_set - 1)
+				begin
+					if(music_repeat == cishu)
+						music_repeat <= 0;
+					else
+						music_repeat = music_repeat + 1;
+				end
+			end
+		end
+		
+		//記數走過多少音符
+		always	@(posedge clock, negedge reset)
+		begin
+			if(!reset)
+				music_total <= 0;
+			else
+			begin
+				if(music_total = cishu && music_total = pre_set - 1)
+					begin
+						if(music_total == YINFU-1)
+							music_total <= 0;
+						else
+							music_total = music_total + 1;
+					end
+			end
+		end
+		
+	
+		//曲目定義
+		always	@(*)
+			if(flag == 1'b0)
+			begin
+				case(pre_set)
+					M0 : cishu = 242;
+					M1 : cishu = 250;
+					M2 : cishu = 281;
+					M3 : cishu = 315;
+					M4 : cishu = 334;
+					M5 : cishu = 375;
+					M6 : cishu = 421;
+					M7 : cishu = 472;
+				endcase
+			end
+			
+			always	@(*)
+			if(flag == 1'b0)
+			begin
+				case(music_total)
+					0 : pre_set = M2;
+					1 : pre_set = M1;
+					2 : pre_set = M0;
+					3 : pre_set = M1;
+					4 : pre_set = M2;
+					5 : pre_set = M2;
+					6 : pre_set = M2;
+					7 : pre_set = M0;
+					
+					8 : pre_set = M1;
+					9 : pre_set = M1;
+					10: pre_set = M1;
+					11: pre_set = M0;
+					12: pre_set = M2;
+					13: pre_set = M4;
+					14: pre_set = M4;
+					15: pre_set = M0;
+					
+					16: pre_set = M2;
+					17: pre_set = M1;
+					18: pre_set = M0;
+					19: pre_set = M1;
+					20: pre_set = M2;
+					21: pre_set = M2;
+					22: pre_set = M2;
+					23: pre_set = M0;
+					
+					24: pre_set = M1;
+					25: pre_set = M0;
+					26: pre_set = M1;
+					27: pre_set = M1;
+					28: pre_set = M2;
+					29: pre_set = M1;
+					30: pre_set = M1;
+					31: pre_set = M0;
+				endcase
+			end
+			
+			assign pre_div - pre_set >> 1;
+			assign cishu_div = cishu*4/5;
+			
+			always	@(posedge clock, negedge reset)
+			begin
+				if(!reset)
+					buzzer <= 1'b1;
+				else if(pre_set !- M0)
+				begin
+					if(music_repeat < cishu_div)
+					begin
+						if(music_time < pre_div)
+							buzzer <= 1'b1;
+						else
+							buzzar <= 1'b0;
+					end
+					else
+						buzzar <= 1'b1;
+				end
+				else
+					buzzar <= 1'b1;
+			end
+endmodule
+		
+		
